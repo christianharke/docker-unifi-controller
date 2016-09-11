@@ -11,6 +11,8 @@ RUN apt-get update --quiet && \
     apt-get install --quiet --yes \
         unifi
 
+COPY system.properties /usr/lib/unifi/data/
+
 EXPOSE 8080/tcp 8443/tcp 8843/tcp 8880/tcp 3478/udp
 
 WORKDIR /var/lib/unifi
